@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router";
 import HomePage from "../pages/home/Home";
 import ProductsPage from "../pages/produtos/ProductsPage";
 import CategoryPage from "../pages/categorias/CategoryPage";
+import ClientsPage from "../pages/clientes/ClientsPage";
 
 export default function AppRoutes() {
     return (
@@ -10,6 +11,7 @@ export default function AppRoutes() {
             <Route path="/home" element={<HomePage />}/>
             <Route path="/produtos" element={<ProductsPage />} />
             <Route path="/categorias" element={<CategoryPage />} />
+            <Route path="/clientes" element={<ClientsPage />} />
         </Routes>
     )
 };
