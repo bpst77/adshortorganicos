@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 
-const handleCadastro = (event, alterar, setAlterar, produtosOg, setProdutosOg) => {
+const handleCadastro = (event, alterar, setAlterar, produtosOg, setProdutosOg, categories) => {
     event.preventDefault();
 
     const id = parseInt(event.target.id.value);
-    const nome = event.target.nome.value;
-    const categoria = event.target.categoria.value;
-    const preco = parseFloat(event.target.preco.value);
+    const nome = event.target.name.value;
+    const categoria = categories.find(c => c.id === event.target.category.value);
+    const preco = parseFloat(event.target.price.value.substring(3));
 
     if ((id && nome && preco) !== null) {
         if (alterar === 0) {
@@ -39,11 +39,24 @@ const preencher = (alterar, produtos) => {
             id.value = produto.id;
             id.disabled = true;
 
-            document.getElementById("cadastro").nome.value = produto.nome;
-            document.getElementById("cadastro").preco.value = produto.preco;
-            document.getElementById("cadastro").categoria.value = produto.categ;
+            document.getElementById("cadastro").name.value = produto.name;
+            document.getElementById("cadastro").price.value = produto.price;
+            document.getElementById("cadastro").category.value = produto.category.id;
         }
     }
+}
+
+const validateNumericInput = (e) => {
+  let digits = e.target.value.replace(/\D/g, '');
+  
+  if (!digits) {
+    e.target.value = '';
+    return;
+  }
+  
+  const numberValue = parseFloat(digits) / 100;
+  
+  e.target.value = new Intl.NumberFormat().format(numberValue);
 }
 
 const CadastrarProduto = ({ produtosOg, setProdutosOg, categories, alterar, setAlterar}) => {
@@ -53,7 +66,7 @@ const CadastrarProduto = ({ produtosOg, setProdutosOg, categories, alterar, setA
 
         <form 
             id="cadastro" 
-            onSubmit={(event) => {handleCadastro(event, alterar, setAlterar, produtosOg, setProdutosOg)}}
+            onSubmit={(event) => {handleCadastro(event, alterar, setAlterar, produtosOg, setProdutosOg, categories)}}
             className="flex flex-col items-center w-full gap-8"
         >
             <span className="flex flex-col items-center gap-2">
@@ -68,36 +81,38 @@ const CadastrarProduto = ({ produtosOg, setProdutosOg, categories, alterar, setA
             </span>
 
             <span className="flex flex-col items-center gap-2">
-                <label htmlFor="nome">Nome</label>
+                <label htmlFor="name">Nome</label>
                 <input 
                     className="w-96 rounded-md px-4 py-2"
                     type="text" 
-                    name="nome" 
-                    placeholder="nome" 
+                    name="name" 
+                    placeholder="Nome do produto" 
                     required 
                 />
             </span>
 
             <span className="flex flex-col items-center gap-2">
-                <label htmlFor="preco">Preço</label>
+                <label htmlFor="price">Preço</label>
                 <input 
                     className="w-96 rounded-md px-4 py-2"
-                    type="text"
-                    name="preco"
-                    placeholder="preço (ex: 11.11 - use ponto e não virgula)" 
+                    type="text" 
+                    inputmode="numeric" 
+                    onInput={(e) => validateNumericInput(e)}
+                    name="price"
+                    placeholder="Preço" 
                     required 
                 />
             </span>
 
             <span className="flex flex-col items-center gap-2">
-                <label htmlFor="categoria">Categoria</label>
-                <select name="categoria" required 
+                <label htmlFor="category">Categoria</label>
+                <select name="category" required 
                     className="w-96 rounded-md px-4 py-2 text-white invalid:text-gray-400"
                 >
                     <option value="" disabled selected hidden>Selecione uma categoria</option>
                     {categories.map((category) => {
                         return (
-                            <option value={category}>{category.description}</option>
+                            <option value={category.id}>{category.description}</option>
                         )
                     })}
                 </select>

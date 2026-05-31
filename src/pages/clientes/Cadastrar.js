@@ -30,18 +30,18 @@ const handleCadastro = (event, alterar, setAlterar, clients, setClients) => {
     }
 }
 
-const preencher = (alterar, produtos) => {
+const preencher = (alterar, clients) => {
     if (alterar !== 0) {
-        const produto = produtos.find(p => p.id === alterar);
+        const client = clients.find(p => p.id === alterar);
 
-        if (produto) {
+        if (client) {
             const id = document.getElementById("cadastro").id
-            id.value = produto.id;
+            id.value = client.id;
             id.disabled = true;
 
-            document.getElementById("cadastro").nome.value = produto.nome;
-            document.getElementById("cadastro").preco.value = produto.preco;
-            document.getElementById("cadastro").categoria.value = produto.categ;
+            document.getElementById("cadastro").name.value = client.name;
+            document.getElementById("cadastro").email.value = client.email;
+            document.getElementById("cadastro").cpf.value = client.cpf;
         }
     }
 }

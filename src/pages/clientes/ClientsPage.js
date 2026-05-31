@@ -28,7 +28,7 @@ export default function ClientsPage() {
                 aAlterar == null ? (
                     <TabelaClientes clientsOg={clientsOg} setClientsOg={setClientsOg} alterar={aAlterar} setAlterar={setAlterar} />
                 ) : (
-                    <CadastrarCliente clientsOg={clientsOg} setClientsOg={setClientsOg} alterar={aAlterar} setAlterar={setAlterar} />
+                    <CadastrarCliente clients={clientsOg} setClients={setClientsOg} alterar={aAlterar} setAlterar={setAlterar} />
                 )
             }
             </div>
