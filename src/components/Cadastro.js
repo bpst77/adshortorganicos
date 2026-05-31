@@ -6,17 +6,15 @@ const Cadastro = ({ produtosOg, setProdutosOg }) => {
     const [aAlterar, setAlterar] = useState(null);
 
     return (
-        <section>
-            <div className="cadastro-container">
-            {
-                aAlterar == null ? (
-                    <Tabela produtosOg={produtosOg} setProdutosOg={setProdutosOg} alterar={aAlterar} setAlterar={setAlterar} />
-                ) : (
-                    <Cadastrar produtosOg={produtosOg} setProdutosOg={setProdutosOg} alterar={aAlterar} setAlterar={setAlterar} />
-                )
-            }
-            </div>
-        </section>
+        <div className="w-[60vw] h-full flex flex-col items-center py-12">
+        {
+            aAlterar == null ? (
+                <Tabela produtosOg={produtosOg} setProdutosOg={setProdutosOg} alterar={aAlterar} setAlterar={setAlterar} />
+            ) : (
+                <Cadastrar produtosOg={produtosOg} setProdutosOg={setProdutosOg} alterar={aAlterar} setAlterar={setAlterar} />
+            )
+        }
+        </div>
     );
 }
 

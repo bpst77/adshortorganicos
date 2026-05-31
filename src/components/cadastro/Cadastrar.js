@@ -51,33 +51,64 @@ const preencher = (alterar, produtos) => {
 
 const Cadastrar = ({ produtosOg, setProdutosOg, alterar, setAlterar}) => {
     return (
-    <div className="cadastrar-container">
-        <h2>Cadastro de produto</h2>
+    <div className="bg-highlight flex flex-col gap-8 items-center w-full h-full rounded-xl p-12">
+        <h2 className="text-banner text-3xl">Nossos Produtos</h2>
 
-        <form id="cadastro" onSubmit={(event) => {handleCadastro(event, alterar, setAlterar, produtosOg, setProdutosOg)}}>
-            <label htmlFor="id">Id</label><br />
-            <input type="text" name="id" placeholder="id" required />
-            <br />
+        <form 
+            id="cadastro" 
+            onSubmit={(event) => {handleCadastro(event, alterar, setAlterar, produtosOg, setProdutosOg)}}
+            className="flex flex-col items-center w-full gap-8"
+        >
+            <span className="flex flex-col items-center gap-2">
+                <label htmlFor="id">Id</label>
+                <input 
+                    className="w-96 rounded-md px-4 py-2"
+                    type="text" 
+                    name="id" 
+                    placeholder="id" 
+                    required 
+                />
+            </span>
 
-            <label htmlFor="nome">Nome</label><br />
-            <input type="text" name="nome" placeholder="nome" required />
-            <br />
+            <span className="flex flex-col items-center gap-2">
+                <label htmlFor="nome">Nome</label>
+                <input 
+                    className="w-96 rounded-md px-4 py-2"
+                    type="text" 
+                    name="nome" 
+                    placeholder="nome" 
+                    required 
+                />
+            </span>
 
-            <label htmlFor="preco">Preço</label><br />
-            <input type="text" name="preco" placeholder="preço (ex: 11.11 - use ponto e não virgula)" required />
-            <br />
+            <span className="flex flex-col items-center gap-2">
+                <label htmlFor="preco">Preço</label>
+                <input 
+                    className="w-96 rounded-md px-4 py-2"
+                    type="text"
+                    name="preco"
+                    placeholder="preço (ex: 11.11 - use ponto e não virgula)" 
+                    required 
+                />
+            </span>
 
-            <label htmlFor="categoria">Categoria</label><br />
-            <select name="categoria" required>
-                <option value="">Selecione uma categoria</option>
-                <option value="legume">Legumes</option>
-                <option value="fruta">Frutas</option>
-                <option value="verdura">Verduras</option>
-            </select>
-            <br />
+            <span className="flex flex-col items-center gap-2">
+                <label htmlFor="categoria">Categoria</label>
+                <select name="categoria" required 
+                    className="w-96 rounded-md px-4 py-2 text-gray-900 invalid:text-gray-400"
+                >
+                    <option value="" disabled selected hidden>Selecione uma categoria</option>
+                    <option value="legume">Legumes</option>
+                    <option value="fruta">Frutas</option>
+                    <option value="verdura">Verduras</option>
+                </select>
+            </span>
 
-            <button type="submit" className="cad-btn cor-btn2 btn-no">Cadastrar</button>
-            <button type="submit" className="cad-btn cor-btn2" onClick={() => setAlterar(null)}>Voltar</button>
+            <div className="flex gap-4">
+                <button type="submit" className="w-32 h-12 bg-spot rounded-md" onClick={() => setAlterar(null)}>Voltar</button>
+                <button type="submit" className="w-32 h-12 bg-header rounded-md">Cadastrar</button>
+            </div>
+
         </form>
 
         {useEffect(() => {

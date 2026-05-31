@@ -68,12 +68,20 @@ body {
   background-color: var(--accent-bg);
 }
 
+.bg-spot {
+  background-color: var(--highlight);
+}
+
 .bg-social {
   background-color: var(--social-bg);
 }
 
 .bg-header {
   background-color: var(--header-bg);
+}
+
+.text-default {
+  color: var(--text);
 }
 
 .review-card {
@@ -88,6 +96,12 @@ body {
 
 .text-lilita {
   font-family: var(--lilita);
+}
+
+.justify-table {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .footer {

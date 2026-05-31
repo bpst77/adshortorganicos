@@ -17,7 +17,7 @@ export default function Banner({ product }) {
                     Conheça ele e muitos outros aqui, na Hortogânicos!
                 </span>
                 <div 
-                className="bg-highlight w-full w-[44.2vw] h-24 flex self-justify-start justify-start pl-8 gap-4 items-center rounded-l-full ml-0 mr-auto cursor-pointer"
+                className="bg-highlight w-[44.2vw] h-24 flex self-justify-start justify-start pl-8 gap-4 items-center rounded-l-full ml-0 mr-auto cursor-pointer"
                 onClick={() => {navigate('/produtos')}}
                 >
                     <ArrowRight size={38}/>

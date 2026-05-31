@@ -26,7 +26,7 @@ class ProductsPage extends Component {
 
     render() {
         return (
-            <div className="App">
+            <div className="h-full w-full flex flex-col items-center">
                 <Cadastro produtosOg={this.state.produtosOg} setProdutosOg={this.atualizarProdutos} />
             </div>
         );
