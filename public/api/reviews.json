@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "stars": 5,
+        "clientId": 1,
+        "content": "Muito bom! Amei os produtos!"
+    },
+    {
+        "id": 2,
+        "stars": 4,
+        "clientId": 2,
+        "content": "Entrega muito rápida e atendimento ótimo!"
+    },
+    {
+        "id": 3,
+        "stars": 5,
+        "clientId": 3,
+        "content": "Tudo muito delicioso! Vou comprar novamente!"
+    },
+    {
+        "id": 4,
+        "stars": 5,
+        "clientId": 4,
+        "content": "Amei. A melhor loja de orgânicos do mercado."
+    }
+]
