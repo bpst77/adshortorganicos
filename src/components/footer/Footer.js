@@ -26,7 +26,7 @@ export default function Footer() {
                     </p>
                 </span>
                 <span className="flex justify-start p-6">
-                    <button onClick={() => window.location.href = "https://github.com/niculinhaz"} className="flex">
+                    <button onClick={() => window.location.href = "https://github.com/bpst77/adshortorganicos"} className="flex">
                         <img src="./imagens/github.svg" className="mx-4" alt="Logo do GitHub"/>
                         <p className="text-footer footer-text text-justify">
                             Nosso github!

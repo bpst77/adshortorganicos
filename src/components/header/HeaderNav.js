@@ -8,7 +8,7 @@ export default function HeaderNav({children}) {
     return (
         <div className="w-full h-screen overflow-y-screen">
             <div className="w-full h-32 bg-header flex flex-row items-center justify-around">
-                <span className="flex align-center w-fit h-fit gap-2">
+                <span className="flex align-center w-fit h-fit gap-2 cursor-pointer" onClick={() => navigate("/home")}>
                     <img src="./imagens/logo.svg" className="h-32" alt="Logo da hortogânicos"></img>
                 </span>
                 <button className="flex flex-row h-fit justify-center gap-2" onClick={() => navigate('/cart')}>
