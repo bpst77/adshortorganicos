@@ -34,13 +34,13 @@ const Tabela = ({ produtosOg = [], setProdutosOg, alterar, setAlterar }) => {
                 </thead>
                 <tbody>
                     {produtos.map((produto) => (
-                    <tr key={produto.id} className="flex h-24 border-b-2 px-8 bg-gray-400">
-                        <td className="w-[12%] px-4 justify-table ">{produto.id}</td>
-                        <td className="w-[28%] px-4 justify-table">{produto.nome}</td>
-                        <td className="w-[30%] px-4 justify-table">R$ {produto.preco.toFixed(2)}</td>
-                        <td className="w-[30%] px-4 justify-table justify-end gap-2">
-                            <button className="bg-accent text-sm px-4 py-2 rounded-xl" onClick={() => setAlterar(produto.id)}>Editar</button>
-                            <button className="bg-gray-800 text-sm px-4 py-2 rounded-xl" onClick={() => setProdutosOg(remover(produto.id, produtosOg))}>Excluir</button>
+                    <tr key={produto.id} className="flex h-24 border-b-2 px-8 bg-[#f0efe5]">
+                        <td className="text-black w-[12%] px-4 justify-table ">{produto.id}</td>
+                        <td className="text-black w-[28%] px-4 justify-table">{produto.nome}</td>
+                        <td className="text-black w-[30%] px-4 justify-table">R$ {produto.preco.toFixed(2)}</td>
+                        <td className="text-black w-[30%] px-4 justify-table justify-end gap-2">
+                            <button className="text-white bg-accent text-sm px-4 py-2 rounded-xl" onClick={() => setAlterar(produto.id)}>Editar</button>
+                            <button className="text-white bg-gray-800 text-sm px-4 py-2 rounded-xl" onClick={() => setProdutosOg(remover(produto.id, produtosOg))}>Excluir</button>
                         </td>
                     </tr>
                     ))}
