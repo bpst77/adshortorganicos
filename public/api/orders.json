@@ -1,0 +1,63 @@
+[
+  {
+    "id": 1,
+    "client": {
+      "id": 1,
+      "name": "Ana Costa",
+      "cpf": "123.456.789-00"
+    },
+    "products": [
+      {
+        "product": {
+          "id": 1,
+          "nome": "Produto 1",
+          "preco": 19.99,
+          "imagem": "placeholder.png",
+          "categ": "legume"
+      },
+        "quantity": 2
+      },
+      {
+        "product": {
+          "id": 2,
+          "nome": "Produto 2",
+          "preco": 29.99,
+          "imagem": "placeholder.png",
+          "categ": "verdura"
+        },
+        "quantity": 1
+      }
+    ],    "date": "15/05/2026"
+  },
+  {
+    "id": 2,
+    "client": {
+      "id": 1,
+      "name": "Ana Costa",
+      "cpf": "123.456.789-00"
+    },
+    "products": [
+      {
+        "product": {
+          "id": 1,
+          "nome": "Produto 1",
+          "preco": 19.99,
+          "imagem": "placeholder.png",
+          "categ": "legume"
+      },
+        "quantity": 2
+      },
+      {
+        "product": {
+          "id": 2,
+          "nome": "Produto 2",
+          "preco": 29.99,
+          "imagem": "placeholder.png",
+          "categ": "verdura"
+        },
+        "quantity": 1
+      }
+    ],
+    "date": "15/05/2026"
+  }
+]

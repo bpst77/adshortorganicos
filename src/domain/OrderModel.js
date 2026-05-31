@@ -10,4 +10,11 @@ export class Order {
         this.products = products;
         this.date = Date(date);
     }
+
+    get orderValue() {
+        return parseFloat(this.products.reduce((acc, curr) => {
+            console.log(curr)
+            return acc + (curr.product.preco * curr.quantity)
+        }, 0))
+    }
 }

@@ -3,6 +3,7 @@ import HomePage from "../pages/home/Home";
 import ProductsPage from "../pages/produtos/ProductsPage";
 import CategoryPage from "../pages/categorias/CategoryPage";
 import ClientsPage from "../pages/clientes/ClientsPage";
+import OrdersPage from "../pages/pedidos/OrdersPage";
 
 export default function AppRoutes() {
     return (
@@ -12,6 +13,7 @@ export default function AppRoutes() {
             <Route path="/produtos" element={<ProductsPage />} />
             <Route path="/categorias" element={<CategoryPage />} />
             <Route path="/clientes" element={<ClientsPage />} />
+            <Route path="/pedidos" element={<OrdersPage />} />
         </Routes>
     )
 };

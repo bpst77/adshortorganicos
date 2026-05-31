@@ -19,7 +19,7 @@ export default function HeaderNav({children}) {
             <div className="w-full h-16 bg-spot flex items-center justify-around">
                 <span className="cursor-pointer" onClick={() => {navigate("/clientes")}}>Clientes</span> |
                 <span className="cursor-pointer" onClick={() => {navigate("/categorias")}}>Categorias</span> |
-                <span className="cursor-pointer" onClick={() => {navigate()}}>Pedidos</span> |
+                <span className="cursor-pointer" onClick={() => {navigate("/pedidos")}}>Pedidos</span> |
                 <span className="cursor-pointer" onClick={() => {navigate("/produtos") }}>Produtos</span>
             </div>
             <div className="w-full h-full">
