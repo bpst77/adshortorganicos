@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import ReviewCard from "./ReviewCard";
-import { Review } from "./ReviewModel";
+import { Review } from "../../domain/ReviewModel";
 
 const CARD_WIDTH = 580;
 const GAP = 24;

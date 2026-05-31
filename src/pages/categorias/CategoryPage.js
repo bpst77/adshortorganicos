@@ -1,34 +1,34 @@
-import React, { useEffect, useState } from "react";
-import TabelaProduto from "./Tabela";
-import CadastrarProduto from "./Cadastrar"
-import "./../../App.css"
+import { useEffect, useState } from "react";
+import TabelaCategoria from "./Tabela";
+import CadastrarCategoria from "./Cadastrar";
 
-const api = "api/prods.json";
+const api = 'api/categories.json';
 
-export default function ProductsPage() {
+export default function CategoryPage() {
     const [aAlterar, setAlterar] = useState(null);
-    const [produtosOg, setProdutosOg] = useState([]);
+
+    const [categories, setCategories] = useState();
 
     useEffect(() => {
         const loadData = async () => {
             try{
                 const response = await fetch(api);
-                setProdutosOg(await response.json() );
+                setCategories( await response.json() );
                 } catch (e) {
                 console.error("Erro ao carregar produtos:", e);
             }
         }
         loadData();
-    }, [])
+    }, []);
 
     return (
         <div className="h-full w-full flex flex-col items-center">
             <div className="w-[60vw] h-full flex flex-col items-center py-12">
             {
                 aAlterar == null ? (
-                    <TabelaProduto produtosOg={produtosOg} setProdutosOg={setProdutosOg} alterar={aAlterar} setAlterar={setAlterar} />
+                    <TabelaCategoria categoriesOg={categories} setCategoriesOg={setCategories} alterar={aAlterar} setAlterar={setAlterar} />
                 ) : (
-                    <CadastrarProduto produtosOg={produtosOg} setProdutosOg={setProdutosOg} alterar={aAlterar} setAlterar={setAlterar} />
+                    <CadastrarCategoria categories={categories} setCategories={setCategories} alterar={aAlterar} setAlterar={setAlterar} />
                 )
             }
             </div>

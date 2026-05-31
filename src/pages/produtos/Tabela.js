@@ -5,7 +5,7 @@ const remover = (id, produtosOg) => {
     return produtosOg.filter((produto) => produto.id !== id);
 };
 
-const Tabela = ({ produtosOg = [], setProdutosOg, alterar, setAlterar }) => {
+const TabelaProduto = ({ produtosOg = [], setProdutosOg, alterar, setAlterar }) => {
     const [produtos, setProdutos] = useState(produtosOg);
     const navigate = useNavigate();
     
@@ -15,7 +15,7 @@ const Tabela = ({ produtosOg = [], setProdutosOg, alterar, setAlterar }) => {
 
     return (
     <div className="bg-highlight flex flex-col gap-8 items-center w-full h-full rounded-xl p-12">
-        <div classname="">
+        <div>
             <button className="banner-text text-3xl text-lilita" >NOSSOS PRODUTOS </button>
         </div>
 
@@ -56,4 +56,4 @@ const Tabela = ({ produtosOg = [], setProdutosOg, alterar, setAlterar }) => {
     );
 }
 
-export default Tabela;
+export default TabelaProduto;

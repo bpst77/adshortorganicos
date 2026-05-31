@@ -34,9 +34,6 @@ const preencher = (alterar, produtos) => {
     if (alterar !== 0) {
         const produto = produtos.find(p => p.id === alterar);
 
-        document.querySelector("h2").textContent = "Alteração de produto";
-        document.querySelector(".cad-btn").textContent = "Salvar";
-
         if (produto) {
             const id = document.getElementById("cadastro").id
             id.value = produto.id;
@@ -49,7 +46,7 @@ const preencher = (alterar, produtos) => {
     }
 }
 
-const Cadastrar = ({ produtosOg, setProdutosOg, alterar, setAlterar}) => {
+const CadastrarProduto = ({ produtosOg, setProdutosOg, alterar, setAlterar}) => {
     return (
     <div className="bg-highlight flex flex-col gap-8 items-center w-full h-full rounded-xl p-12">
         <h2 className="text-banner text-3xl">Nossos Produtos</h2>
@@ -62,7 +59,7 @@ const Cadastrar = ({ produtosOg, setProdutosOg, alterar, setAlterar}) => {
             <span className="flex flex-col items-center gap-2">
                 <label htmlFor="id">Id</label>
                 <input 
-                    className="w-96 rounded-md px-4 py-2"
+                    className="w-96 rounded-md px-4 py-2 disabled:bg-[#3b3b3b]"
                     type="text" 
                     name="id" 
                     placeholder="id" 
@@ -95,7 +92,7 @@ const Cadastrar = ({ produtosOg, setProdutosOg, alterar, setAlterar}) => {
             <span className="flex flex-col items-center gap-2">
                 <label htmlFor="categoria">Categoria</label>
                 <select name="categoria" required 
-                    className="w-96 rounded-md px-4 py-2 text-gray-900 invalid:text-gray-400"
+                    className="w-96 rounded-md px-4 py-2 text-white invalid:text-gray-400"
                 >
                     <option value="" disabled selected hidden>Selecione uma categoria</option>
                     <option value="legume">Legumes</option>
@@ -118,4 +115,4 @@ const Cadastrar = ({ produtosOg, setProdutosOg, alterar, setAlterar}) => {
     );
 }
 
-export default Cadastrar;
+export default CadastrarProduto;

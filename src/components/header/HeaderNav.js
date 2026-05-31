@@ -16,6 +16,12 @@ export default function HeaderNav({children}) {
                     <ShoppingCart className="w-8 h-8 color-white"></ShoppingCart>
                 </button>
             </div>
+            <div className="w-full h-16 bg-spot flex items-center justify-around">
+                <span className="cursor-pointer" onClick={() => {navigate()}}>Clientes</span> |
+                <span className="cursor-pointer" onClick={() => {navigate("/categorias")}}>Categorias</span> |
+                <span className="cursor-pointer" onClick={() => {navigate()}}>Pedidos</span> |
+                <span className="cursor-pointer" onClick={() => {navigate("/produtos") }}>Produtos</span>
+            </div>
             <div className="w-full h-full">
                 {children}
             </div>

@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "description": "Frutas"
+  },
+  {
+    "id": 2,
+    "description": "Verduras"
+  },
+  {
+    "id": 3,
+    "description": "Legumes"
+  },
+  {
+    "id": 4,
+    "description": "Grãos"
+  },
+  {
+    "id": 5,
+    "description": "Produtos Naturais"
+  }
+]
