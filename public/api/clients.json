@@ -2,21 +2,25 @@
   {
     "id": 1,
     "name": "Ana Costa",
+    "email": "anacosta@email.com",
     "cpf": "123.456.789-00"
   },
   {
     "id": 2,
     "name": "Carlos Lima",
+    "email": "carloslima@email.com",
     "cpf": "987.654.321-00"
   },
   {
     "id": 3,
     "name": "Nicholas",
+    "email": "nicholas@email.com",
     "cpf": "789.467.321-92"
   },
   {
     "id": 4,
     "name": "Bruno",
+    "email": "bruno@email.com",
     "cpf": "262.312.367-90"
   }
 ]

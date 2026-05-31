@@ -1,44 +1,62 @@
 [
-    {
+  {
+    "id": 1,
+    "name": "Banana Orgânica",
+    "imagePath": "placeholder.png",
+    "category": {
       "id": 1,
-      "nome": "Produto 1",
-      "preco": 19.99,
-      "imagem": "placeholder.png",
-      "categ": "legume"
+      "description": "Frutas"
     },
-    {
+    "price": 8.99
+  },
+  {
+    "id": 2,
+    "name": "Maçã Fuji Orgânica",
+    "imagePath": "placeholder.png",
+    "category": {
+      "id": 1,
+      "description": "Frutas"
+    },
+    "price": 12.50
+  },
+  {
+    "id": 3,
+    "name": "Alface Crespa Orgânica",
+    "imagePath": "placeholder.png",
+    "category": {
       "id": 2,
-      "nome": "Produto 2",
-      "preco": 29.99,
-      "imagem": "placeholder.png",
-      "categ": "legume"
+      "description": "Verduras"
     },
-    {
-      "id": 3,
-      "nome": "Produto 3",
-      "preco": 29.99,
-      "imagem": "placeholder.png",
-      "categ": "fruta"
-    },
-    {
-      "id": 4,
-      "nome": "Produto 4",
-      "preco": 39.99,
-      "imagem": "teste.png",
-      "categ": "fruta"
-    },
-    {
-      "id": 5,
-      "nome": "Produto 5",
-      "preco": 39.99,
-      "imagem": "teste.png",
-      "categ": "verdura"
-    },
-    {
+    "price": 4.99
+  },
+  {
+    "id": 4,
+    "name": "Cenoura Orgânica",
+    "imagePath": "placeholder.png",
+    "category": {
       "id": 6,
-      "nome": "Produto 6",
-      "preco": 39.99,
-      "imagem": "teste.png",
-      "categ": "legume"
-    }
+      "description": "Tubérculos"
+    },
+    "price": 6.49
+  },
+  {
+    "id": 5,
+    "name": "Feijão Preto Orgânico",
+    "imagePath": "placeholder.png",
+    "category": {
+      "id": 3,
+      "description": "Grãos"
+    },
+    "price": 14.90
+  },
+  {
+    "id": 6,
+    "name": "Mel Orgânico",
+    "imagePath": "placeholder.png",
+    "category": {
+      "id": 5,
+      "description": "Produtos Naturais"
+    },
+    "price": 24.90
+  }
 ]

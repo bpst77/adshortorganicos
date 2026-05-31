@@ -16,7 +16,7 @@ const TabelaProduto = ({ produtosOg = [], setProdutosOg, alterar, setAlterar }) 
     return (
     <div className="bg-highlight flex flex-col gap-8 items-center w-full h-full rounded-xl p-12">
         <div>
-            <button className="banner-text text-3xl text-lilita" >NOSSOS PRODUTOS </button>
+            <span className="banner-text text-3xl text-lilita" >NOSSOS PRODUTOS</span>
         </div>
 
         {produtos.length === 0 && <h3>Não há produtos cadastrados</h3>}
@@ -27,8 +27,9 @@ const TabelaProduto = ({ produtosOg = [], setProdutosOg, alterar, setAlterar }) 
                 <thead className="">
                     <tr className="bg-spot rounded-t-xl flex h-20 px-8">
                         <th className="w-[12%] px-4 justify-table sticky top-0 z-50">Id</th>
-                        <th className="w-[28%] px-4 justify-table sticky top-0 z-50">Nome</th>
-                        <th className="w-[30%] px-4 justify-table sticky top-0 z-50">Preço</th>
+                        <th className="w-[20%] px-4 justify-table sticky top-0 z-50">Nome</th>
+                        <th className="w-[18%] px-4 justify-table sticky top-0 z-50">Categoria</th>
+                        <th className="w-[20%] px-4 justify-table sticky top-0 z-50">Preço</th>
                         <th className="w-[30%] px-16 justify-table justify-end sticky top-0 z-50">Ações</th>
                     </tr>
                 </thead>
@@ -36,8 +37,9 @@ const TabelaProduto = ({ produtosOg = [], setProdutosOg, alterar, setAlterar }) 
                     {produtos.map((produto) => (
                     <tr key={produto.id} className="flex h-24 border-b-2 px-8 bg-[#f0efe5]">
                         <td className="text-black w-[12%] px-4 justify-table ">{produto.id}</td>
-                        <td className="text-black w-[28%] px-4 justify-table">{produto.nome}</td>
-                        <td className="text-black w-[30%] px-4 justify-table">R$ {produto.preco.toFixed(2)}</td>
+                        <td className="text-black w-[28%] px-4 justify-table">{produto.name}</td>
+                        <td className="text-black w-[28%] px-4 justify-table">{produto.category.description}</td>
+                        <td className="text-black w-[30%] px-4 justify-table">R$ {produto.price.toFixed(2)}</td>
                         <td className="text-black w-[30%] px-4 justify-table justify-end gap-2">
                             <button className="text-white bg-accent text-sm px-4 py-2 rounded-xl" onClick={() => setAlterar(produto.id)}>Editar</button>
                             <button className="text-white bg-gray-800 text-sm px-4 py-2 rounded-xl" onClick={() => setProdutosOg(remover(produto.id, produtosOg))}>Excluir</button>

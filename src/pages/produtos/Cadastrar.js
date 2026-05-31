@@ -46,7 +46,7 @@ const preencher = (alterar, produtos) => {
     }
 }
 
-const CadastrarProduto = ({ produtosOg, setProdutosOg, alterar, setAlterar}) => {
+const CadastrarProduto = ({ produtosOg, setProdutosOg, categories, alterar, setAlterar}) => {
     return (
     <div className="bg-highlight flex flex-col gap-8 items-center w-full h-full rounded-xl p-12">
         <h2 className="text-banner text-3xl">Nossos Produtos</h2>
@@ -95,9 +95,11 @@ const CadastrarProduto = ({ produtosOg, setProdutosOg, alterar, setAlterar}) => 
                     className="w-96 rounded-md px-4 py-2 text-white invalid:text-gray-400"
                 >
                     <option value="" disabled selected hidden>Selecione uma categoria</option>
-                    <option value="legume">Legumes</option>
-                    <option value="fruta">Frutas</option>
-                    <option value="verdura">Verduras</option>
+                    {categories.map((category) => {
+                        return (
+                            <option value={category}>{category.description}</option>
+                        )
+                    })}
                 </select>
             </span>
 
