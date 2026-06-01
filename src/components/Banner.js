@@ -7,7 +7,7 @@ export default function Banner({ product }) {
     return (
         <div className="bg-accent w-full h-90 flex items-center justify-around p-12 gap-4">
             <div className="flex items-center justify-center bg-white w-72 h-72 rounded-full">
-                 <img src="./imagens/placeholder.png" className="h-48 w-48"></img>
+                 <img src="./imagens/placeholder.png" className="h-48 w-48" alt=""></img>
             </div>
             <div className="flex flex-col justify-start items-center h-full max-w-[30vw] gap-8">
                 <h1 className="banner-text text-5xl text-lilita">VENHA CONHECER!!</h1>

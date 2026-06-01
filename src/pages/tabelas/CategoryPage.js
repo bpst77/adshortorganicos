@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import TabelaCategoria from "./Tabela";
-import CadastrarCategoria from "./Cadastrar";
+import {TabelaCategoria} from "../../components/Tabela";
+import CadastrarCategoria from "../cadastrar/CadastrarCategoria";
 
 const api = 'api/categories.json';
 

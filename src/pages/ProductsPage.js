@@ -1,9 +1,32 @@
 import React, { useEffect, useState } from "react";
-import TabelaProduto from "./Tabela";
-import CadastrarProduto from "./Cadastrar"
-import "./../../App.css"
-import { Product } from "../../domain/ProductModel";
-import { Category } from "../../domain/CategoryModel";
+import {TabelaProduto} from "../components/Tabela";
+import CadastrarProduto from "./cadastrar/CadastrarProduto"
+
+class Category {
+    id;
+    description;
+
+    constructor(id, description) {
+        this.id = id;
+        this.description = description;
+    };
+}
+
+class Product {
+    id;
+    name;
+    category;
+    imagePath;
+    price;
+
+    constructor(id, name, category, imagePath, price) {
+        this.id = id;
+        this.name = name;
+        this.category = category;
+        this.imagePath = imagePath;
+        this.price = price;
+    }
+}
 
 const productApi = "api/prods.json";
 const categoryApi = "api/categories.json";

@@ -1,5 +1,5 @@
-import Banner from "../../components/banner/Banner";
-import ReviewList from "../../components/review-list/ReviewList";
+import Banner from "../components/Banner";
+import ReviewList from "../components/review/ReviewList";
 
 export default function HomePage() {
     return (

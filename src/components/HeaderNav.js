@@ -1,6 +1,5 @@
 import { ShoppingCart } from "lucide-react";
 import { useNavigate } from "react-router";
-import Footer from "../footer/Footer";
 
 export default function HeaderNav({children}) {
     const navigate = useNavigate();
@@ -16,16 +15,18 @@ export default function HeaderNav({children}) {
                     <ShoppingCart className="w-8 h-8 color-white"></ShoppingCart>
                 </button>
             </div>
+
             <div className="w-full h-16 bg-spot flex items-center justify-around">
                 <span className="cursor-pointer" onClick={() => {navigate("/clientes")}}>Clientes</span> |
                 <span className="cursor-pointer" onClick={() => {navigate("/categorias")}}>Categorias</span> |
                 <span className="cursor-pointer" onClick={() => {navigate("/pedidos")}}>Pedidos</span> |
                 <span className="cursor-pointer" onClick={() => {navigate("/produtos") }}>Produtos</span>
+                <span className="cursor-pointer" onClick={() => {navigate("/sobre") }}>Sobre</span>
             </div>
+
             <div className="w-full h-full">
                 {children}
             </div>
-            <Footer/>
         </div>
     );
 };

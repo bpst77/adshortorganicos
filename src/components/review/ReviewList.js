@@ -1,7 +1,22 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import ReviewCard from "./ReviewCard";
-import { Review } from "../../domain/ReviewModel";
+
+class Review {
+    id;
+    stars;
+    clientId;
+    clientName;
+    content;
+
+    constructor(data, clients) {
+        this.id = data.id;
+        this.stars = data.stars;
+        this.clientId = data.clientId;
+        this.clientName = clients.find((c) => c.id === data.clientId)?.name ?? "Cliente"
+        this.content = data.content;
+    }
+}
 
 const CARD_WIDTH = 580;
 const GAP = 24;

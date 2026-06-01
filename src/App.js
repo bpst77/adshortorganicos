@@ -1,34 +1,20 @@
 import React, { Component } from 'react';
-import './App.css';
-import Cadastro from './components/Cadastro';
-
-const api = "api/prods.json";
+import { BrowserRouter } from 'react-router';
+import AppRoutes from './components/Routes';
+import HeaderNav from './components/HeaderNav';
+import Footer from './components/Footer';
 
 class App extends Component {
-    state = {
-        produtosOg: []
-    };
-
-    async componentDidMount() {
-        try{
-            const response = await fetch(api);
-            this.setState({ produtosOg: await response.json() });
-
-            this.setState({ produtos: this.state.produtosOg });
-        } catch (e) {
-            console.error("Erro ao carregar produtos:", e);
-        }
-    }
-
-    atualizarProdutos = (newProdutos) => {
-        this.setState({ produtosOg: newProdutos });
-    }
 
     render() {
         return (
-            <div className="App">
-                
-                <Cadastro produtosOg={this.state.produtosOg} setProdutosOg={this.atualizarProdutos} />
+            <div className="App">  
+                <BrowserRouter>
+                    <HeaderNav>
+                        <AppRoutes/>
+                    </HeaderNav>
+                    <Footer/>
+                </BrowserRouter>
             </div>
         );
     }

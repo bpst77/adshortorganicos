@@ -1,9 +1,10 @@
 import { Route, Routes } from "react-router";
-import HomePage from "../pages/home/Home";
-import ProductsPage from "../pages/produtos/ProductsPage";
-import CategoryPage from "../pages/categorias/CategoryPage";
-import ClientsPage from "../pages/clientes/ClientsPage";
-import OrdersPage from "../pages/pedidos/OrdersPage";
+import HomePage from "../pages/HomePage";
+import ProductsPage from "../pages/ProductsPage";
+import CategoryPage from "../pages/tabelas/CategoryPage";
+import ClientsPage from "../pages/tabelas/ClientsPage";
+import OrdersPage from "../pages/tabelas//OrdersPage";
+import SobrePage from "../pages/SobrePage";
 
 export default function AppRoutes() {
     return (
@@ -14,6 +15,7 @@ export default function AppRoutes() {
             <Route path="/categorias" element={<CategoryPage />} />
             <Route path="/clientes" element={<ClientsPage />} />
             <Route path="/pedidos" element={<OrdersPage />} />
+            <Route path="/sobre" element={<SobrePage />} />
         </Routes>
     )
 };
