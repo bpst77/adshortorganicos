@@ -14,14 +14,14 @@ const handleCadastro = (event, alterar, setAlterar, categories, setCategories) =
                 return;
             } else{
                 const novaLista = categories.filter(p => p.id !== id);
-                novaLista.push({ "id": id, "category": category });
+                novaLista.push({ "id": id, "description": category });
                 setCategories(novaLista);
                 setAlterar(null);
             }
             
         } else {
             const novaLista = categories.filter(p => p.id !== alterar);
-                novaLista.push({ "id": id, "category": category });
+                novaLista.push({ "id": id, "description": category });
                 setCategories(novaLista);
                 setAlterar(null);
         }

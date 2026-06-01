@@ -5,8 +5,10 @@ const handleCadastro = (event, alterar, setAlterar, produtosOg, setProdutosOg, c
 
     const id = parseInt(event.target.id.value);
     const nome = event.target.name.value;
-    const categoria = categories.find(c => c.id === event.target.category.value);
-    const preco = parseFloat(event.target.price.value.substring(3));
+    const categoria = categories.find(c => c.id === parseInt(event.target.category.value));
+    const preco = parseFloat(event.target.price.value);
+
+    console.log(categoria);
 
     if ((id && nome && preco) !== null) {
         if (alterar === 0) {
@@ -16,14 +18,14 @@ const handleCadastro = (event, alterar, setAlterar, produtosOg, setProdutosOg, c
                 return;
             } else{
                 const novaLista = produtosOg.filter(p => p.id !== id);
-                novaLista.push({ "id": id, "nome": nome, "preco": preco, "categoria": categoria, "imagem": "placeholder.png" });
+                novaLista.push({ "id": id, "name": nome, "price": preco, "category": categoria, "imagePath": "placeholder.png" });
                 setProdutosOg(novaLista);
                 setAlterar(null);
             }
             
         } else {
             const novaLista = produtosOg.filter(p => p.id !== alterar);
-                novaLista.push({ "id": alterar, "nome": nome, "preco": preco, "categoria": categoria, "imagem": "placeholder.png" });
+                novaLista.push({ "id": alterar, "name": nome, "price": preco, "category": categoria, "imagePath": "placeholder.png" });
                 setProdutosOg(novaLista);
                 setAlterar(null);
         }

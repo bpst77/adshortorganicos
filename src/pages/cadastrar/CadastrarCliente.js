@@ -6,7 +6,7 @@ const handleCadastro = (event, alterar, setAlterar, clients, setClients) => {
     const id = parseInt(event.target.id.value);
     const name = event.target.name.value;
     const email = event.target.email.value;
-    const cpf = event.target.preco.value;
+    const cpf = event.target.cpf.value;
 
     if ((id && name && email && cpf) !== null) {
         if (alterar === 0) {

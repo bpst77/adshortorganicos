@@ -72,6 +72,10 @@ body {
   background-color: var(--highlight);
 }
 
+.text-spot {
+  color: var(--highlight);
+}
+
 .bg-social {
   background-color: var(--social-bg);
 }
