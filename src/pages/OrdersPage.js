@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import {TabelaPedido} from "../../components/Tabela";
-import OrderResume from "../OrderResume";
+import {TabelaPedido} from "../components/Tabela";
+import OrderResume from "./OrderResume";
 
 class Order {
     id;

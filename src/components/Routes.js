@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router";
 import HomePage from "../pages/HomePage";
 import ProductsPage from "../pages/ProductsPage";
-import CategoryPage from "../pages/tabelas/CategoryPage";
-import ClientsPage from "../pages/tabelas/ClientsPage";
-import OrdersPage from "../pages/tabelas//OrdersPage";
+import CategoryPage from "../pages/CategoryPage";
+import ClientsPage from "../pages/ClientsPage";
+import OrdersPage from "../pages/OrdersPage";
 import SobrePage from "../pages/SobrePage";
 
 export default function AppRoutes() {

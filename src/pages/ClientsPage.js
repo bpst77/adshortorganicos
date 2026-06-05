@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import {TabelaClientes} from "../../components/Tabela";
-import CadastrarCliente from "../cadastrar/CadastrarCliente";
+import {TabelaClientes} from "../components/Tabela";
+import {CadastrarCliente} from "../components/Cadastro";
 
 const api = "api/clients.json";
 

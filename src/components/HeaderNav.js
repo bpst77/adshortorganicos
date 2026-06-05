@@ -1,4 +1,3 @@
-import { ShoppingCart } from "lucide-react";
 import { useNavigate } from "react-router";
 import Footer from '../components/Footer';
 

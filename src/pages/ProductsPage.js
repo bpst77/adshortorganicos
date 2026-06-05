@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {TabelaProduto} from "../components/Tabela";
-import CadastrarProduto from "./cadastrar/CadastrarProduto"
+import {CadastrarProduto} from "../components/Cadastro"
 
 class Category {
     id;
