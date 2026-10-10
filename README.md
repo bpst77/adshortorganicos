@@ -1,13 +1,40 @@
-### Sobre
-Projeto de aplicação web usando 'React' desenvolvido para a disciplina de "Desenvolvimento Web II"
+# Aplicação Web - venda de hortifruti
 
-## Detalhes
-- Framework React
-- Biblioteca Postcss
-- Tailwindcss (postcss)
-- Autoprefixer (postcss)
-- Lucide (React)
+> **Desenvolvimento Web 2** — Desenvolvimento de uma solução computacional para digitalização, gestão de acervos, registro de clientes e controle de vendas.
 
-## Grupo
-- Nicholas Ferraz
-- Bruno Pereira
+---
+
+## 📌 Sobre o Projeto
+
+O presente projeto tem como objetivo o desenvolvimento de uma aplicação web com o uso do framework 'React' do Node.js(Javascript) para uma empresa ficticia.
+
+Este projeto foi desenvolvido como requisito para composição de nota.
+
+---
+
+## 🛠️ Detalhes
+
+* **Framework React** *+Lucide*
+* **Postcss:** *+Tailwindcss/Autoprefixer*
+
+---
+
+## 🎯 Escopo e Funcionalidades Previstas
+
+A solução computacional contempla (conforme evolução do levantamento de requisitos com o parceiro):
+
+* **Catálogo:** Catalogação de livros e itens físicos com suporte a consulta rápida e localização.
+* **Carrinho:** Lista de compras.
+* **Edição de registros:** Páginas que permitem a edição de dados.
+* *A persistência dos dados só ocorrem dentro da sessão, enquanto a página estiver aberta.
+
+---
+
+## 👥 Equipe de Desenvolvimento
+
+| Nome | Prontuário |
+| --- | --- |
+| **Bruno Pereira** | SP3154343 |
+| **Nicholas Ferraz** | SP3180808 |
+
+---
