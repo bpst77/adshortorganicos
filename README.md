@@ -15,7 +15,7 @@ Este projeto foi desenvolvido como requisito para composição de nota.
 ## 🛠️ Detalhes
 
 * **Framework React** *+Lucide*
-* **Postcss:** *+Tailwindcss/Autoprefixer*
+* **Postcss** *+Tailwindcss/Autoprefixer*
 
 ---
 
@@ -34,7 +34,7 @@ A solução computacional contempla (conforme evolução do levantamento de requ
 
 | Nome | Prontuário |
 | --- | --- |
-| **Bruno Pereira** | SP3154343 |
-| **Nicholas Ferraz** | SP3180808 |
+| **Bruno Pereira** |
+| **Nicholas Ferraz** |
 
 ---
