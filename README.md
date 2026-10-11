@@ -32,8 +32,8 @@ A solução computacional contempla (conforme evolução do levantamento de requ
 
 ## 👥 Equipe de Desenvolvimento
 
-| Nome | Prontuário |
-| --- | --- |
+| Nome |
+| --- |
 | **Bruno Pereira** |
 | **Nicholas Ferraz** |
 
