@@ -1,7 +1,6 @@
 # Aplicação Web - venda de hortifruti
 
-> **Desenvolvimento Web 2** — Desenvolvimento de uma solução computacional para digitalização, gestão de acervos, registro de clientes e controle de vendas.
-
+> **Desenvolvimento Web 2** — Desenvolvimento de uma aplicação web baseada em sites de venda digital de verduras
 ---
 
 ## 📌 Sobre o Projeto
