@@ -27,7 +27,7 @@ Este projeto foi desenvolvido como requisito para composição de nota.
 
 ---
 
-## 👥 Equipe de Desenvolvimento
+## 👥 Grupo
 
 | Nome |
 | --- |
