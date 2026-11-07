@@ -1,11 +1,10 @@
 import { useNavigate } from "react-router";
-import Footer from '../components/Footer';
 
 export default function HeaderNav({children}) {
     const navigate = useNavigate();
 
     return (
-        <div className="w-full h-screen overflow-y-screen">
+        <div className="w-full overflow-y-screen">
             <div className="w-full h-32 bg-header flex flex-row items-center justify-around">
                 <span className="flex align-center w-fit h-fit gap-2 mt-4 cursor-pointer" onClick={() => navigate("/home")}>
                     <img src="./imagens/logo.svg" className="h-32" alt="Logo da hortogânicos"></img>
@@ -16,18 +15,11 @@ export default function HeaderNav({children}) {
                 </button>
             </div>
 
-            <div className="w-full h-16 bg-spot flex items-center justify-around">
-                <span className="cursor-pointer" onClick={() => {navigate("/clientes")}}>Clientes</span> |
-                <span className="cursor-pointer" onClick={() => {navigate("/categorias")}}>Categorias</span> |
-                <span className="cursor-pointer" onClick={() => {navigate("/pedidos")}}>Pedidos</span> |
-                <span className="cursor-pointer" onClick={() => {navigate("/produtos") }}>Produtos</span> |
+            <div className="w-full h-16 bg-spot flex items-center justify-around" style={{ paddingLeft: "35%", paddingRight: "35%"}}>
+                <span className="cursor-pointer" onClick={() => {navigate("/produtos")}}>Catálogo</span> |
+                <span className="cursor-pointer" onClick={() => {navigate("/registros")}}>Registros</span> |
                 <span className="cursor-pointer" onClick={() => {navigate("/sobre") }}>Sobre</span>
             </div>
-
-            <div className="w-full h-full">
-                {children}
-            </div>
-            <Footer />
         </div>
     );
 };

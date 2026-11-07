@@ -1,71 +1,28 @@
-import React, { useEffect, useState } from "react";
-import {TabelaProduto} from "../components/Tabela";
-import {CadastrarProduto} from "../components/Cadastro"
+const plch = "/imagens/placeholder.png"
 
-class Category {
-    id;
-    description;
-
-    constructor(id, description) {
-        this.id = id;
-        this.description = description;
-    };
+const arrendodar = (valor) => {
+    return Number(valor).toFixed(2);
 }
 
-class Product {
-    id;
-    name;
-    category;
-    imagePath;
-    price;
-
-    constructor(id, name, category, imagePath, price) {
-        this.id = id;
-        this.name = name;
-        this.category = category;
-        this.imagePath = imagePath;
-        this.price = price;
-    }
-}
-
-const productApi = "api/prods.json";
-const categoryApi = "api/categories.json";
-
-export default function ProductsPage() {
-    const [aAlterar, setAlterar] = useState(null);
-    const [produtosOg, setProdutosOg] = useState([]);
-    const [categories, setCategories] = useState([]);
-
-    useEffect(() => {
-        const loadData = async () => {
-            try{
-                const productsResponse = await fetch(productApi);
-                const categoriesResponse = await fetch(categoryApi);
-                const products = await productsResponse.json().then((data) => {
-                    return data.map((prod) => new Product(prod.id, prod.name, prod.category, prod.imagePath, prod.price))
-                })
-                const fetchedCategories = await categoriesResponse.json().then((data) => {
-                    return data.map((cat) => new Category(cat.id, cat.description))
-                });
-                setCategories(fetchedCategories);
-                setProdutosOg(products);
-                } catch (e) {
-                console.error("Erro ao carregar produtos:", e);
-            }
-        }
-        loadData();
-    }, [])
-
+export default function ProductsPage({ produtos }) {
     return (
+        
         <div className="h-full w-full flex flex-col items-center">
-            <div className="w-[60vw] h-full flex flex-col items-center py-12">
-            {
-                aAlterar == null ? (
-                    <TabelaProduto produtosOg={produtosOg} setProdutosOg={setProdutosOg} alterar={aAlterar} setAlterar={setAlterar} />
-                ) : (
-                    <CadastrarProduto produtosOg={produtosOg} setProdutosOg={setProdutosOg} categories={categories} alterar={aAlterar} setAlterar={setAlterar} />
-                )
-            }
+            <div className="w-[60vw] flex flex-row py-12 flex-wrap" style={{gap: "15px"}}>
+               {produtos.map((prod) => (
+                <div className="bg-gray rounded-lg prod" style={{width: "400px", height: "300px", overflow: "hidden"}}>
+                    <img src={plch} className="w-full" style={{height: "200px", objectFit: "cover"}} alt=""></img>
+
+                    <div className="flex flex-row justify-between p-2" style={{height: "100px"}}>
+                        <div className="w-2/3 justify-evenly">
+                            <h5 className="prod-text text-xl font-extrabold">{prod.name}</h5>
+                            <span className="prod-text2 font-bold text-lg">R$ {arrendodar(prod.price)}</span>
+                        </div>
+                        
+                        <button className="prod-button rounded-xl font-bold" style={{height: "50px", padding: "10px"}}>Comprar</button>
+                    </div>"
+                </div>
+                ))}
             </div>
         </div>
     );

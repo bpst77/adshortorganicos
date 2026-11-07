@@ -1,20 +1,17 @@
 import { Route, Routes } from "react-router";
 import HomePage from "../pages/HomePage";
 import ProductsPage from "../pages/ProductsPage";
-import CategoryPage from "../pages/CategoryPage";
-import ClientsPage from "../pages/ClientsPage";
-import OrdersPage from "../pages/OrdersPage";
 import SobrePage from "../pages/SobrePage";
+import RegistrosPage from "../pages/RegistrosPage"
 
-export default function AppRoutes() {
+export default function AppRoutes({clientes, setClientes, pedidos, setPedidos, produtos, setProdutos, categorias, setCategorias}) {
     return (
         <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/home" element={<HomePage />}/>
-            <Route path="/produtos" element={<ProductsPage />} />
-            <Route path="/categorias" element={<CategoryPage />} />
-            <Route path="/clientes" element={<ClientsPage />} />
-            <Route path="/pedidos" element={<OrdersPage />} />
+
+            <Route path="/produtos" element={<ProductsPage produtos={produtos} setProdutos={setProdutos} />} />
+            <Route path="/registros" element={<RegistrosPage clientes={clientes} setClientes={setClientes} pedidos={pedidos} setPedidos={setPedidos} produtos={produtos} setProdutos={setProdutos} categorias={categorias} setCategorias={setCategorias} />} />
             <Route path="/sobre" element={<SobrePage />} />
         </Routes>
     )

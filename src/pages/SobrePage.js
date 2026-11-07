@@ -3,7 +3,7 @@ const imgdir = "/imagens/";
 const SobrePage = () => {
     return (
         <section>
-            <div className='flex flex-col w-full h-full justify-center items-center gap-8'>
+            <div className='flex flex-col w-full h-full justify-center items-center gap-8 pb-10'>
                 <br/>
                 <h3 className="text-lilita text-spot text-4xl">SOBRE NÓS</h3>
                 <div className="w-2/4">

@@ -3,60 +3,42 @@
     "id": 1,
     "name": "Banana Orgânica",
     "imagePath": "placeholder.png",
-    "category": {
-      "id": 1,
-      "description": "Frutas"
-    },
+    "category": "Frutas",
     "price": 8.99
   },
   {
     "id": 2,
     "name": "Maçã Fuji Orgânica",
     "imagePath": "placeholder.png",
-    "category": {
-      "id": 1,
-      "description": "Frutas"
-    },
+    "category": "Frutas",
     "price": 12.50
   },
   {
     "id": 3,
     "name": "Alface Crespa Orgânica",
     "imagePath": "placeholder.png",
-    "category": {
-      "id": 2,
-      "description": "Verduras"
-    },
+    "category": "Verduras",
     "price": 4.99
   },
   {
     "id": 4,
     "name": "Cenoura Orgânica",
     "imagePath": "placeholder.png",
-    "category": {
-      "id": 6,
-      "description": "Tubérculos"
-    },
+    "category": "Frutas",
     "price": 6.49
   },
   {
     "id": 5,
     "name": "Feijão Preto Orgânico",
     "imagePath": "placeholder.png",
-    "category": {
-      "id": 3,
-      "description": "Grãos"
-    },
+    "category": "Grãos",
     "price": 14.90
   },
   {
     "id": 6,
     "name": "Mel Orgânico",
     "imagePath": "placeholder.png",
-    "category": {
-      "id": 5,
-      "description": "Produtos Naturais"
-    },
+    "category": "Produtos Naturais",
     "price": 24.90
   }
 ]

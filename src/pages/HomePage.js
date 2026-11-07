@@ -5,7 +5,7 @@ export default function HomePage() {
     return (
         <div className="h-full pb-16 flex flex-col items-center justify-between">
             <Banner />
-            <h1 className="text-black">Veja o que nossos clientes acharam:</h1>
+            <h1 className="text-black pt-10" style={{fontWeight: 700}}>Veja o que nossos clientes acharam:</h1>
             <ReviewList/>
         </div>
     );
