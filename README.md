@@ -32,6 +32,6 @@ Este projeto foi desenvolvido como requisito para composição de nota.
 | Nome |
 | --- |
 | **Bruno Pereira** |
-| **Nicholas Ferraz** |
+| **[Nicholas Ferraz](https://github.com/niculinhaz)** |
 
 ---
